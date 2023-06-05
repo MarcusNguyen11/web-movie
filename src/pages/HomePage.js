@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { Alert, Box, Container, Stack } from "@mui/material";
 import MovieFilter from "../components/MovieFilter";
 import MovieSearch from "../components/MovieSearch";
@@ -118,17 +118,16 @@ function HomePage() {
     }
     setLoading(false);
   };
-
-  const processChange = useCallback(
-    debounce((searchInfor) => {
-      if (searchInfor) {
-        searchMovie(1, searchInfor);
-      } else {
-        getMovies(1);
-      }
-    }, 1000),
-    []
-  );
+  // useCallback(,
+  //   []
+  // );
+  const processChange = debounce((searchInfor) => {
+    if (searchInfor) {
+      searchMovie(1, searchInfor);
+    } else {
+      getMovies(1);
+    }
+  }, 1000);
   return (
     <Container sx={{ display: "flex", minHeight: "100vh", mt: 3 }}>
       <Stack>
