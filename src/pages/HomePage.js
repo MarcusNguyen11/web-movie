@@ -118,7 +118,7 @@ function HomePage() {
     }
     setLoading(false);
   };
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const processChange = useCallback(
     debounce((searchInfor) => {
       if (searchInfor) {
