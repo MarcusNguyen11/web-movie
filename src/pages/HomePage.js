@@ -8,7 +8,6 @@ import { useForm } from "react-hook-form";
 import apiService from "../app/apiService";
 import LoadingScreen from "../components/LoadingScreen";
 import { Pagination } from "@mui/material";
-import "./styles.css";
 import { debounce } from "lodash";
 import MovieSort from "../components/MovieSort";
 
@@ -124,7 +123,6 @@ function HomePage() {
       if (searchInfor) {
         searchMovie(1, searchInfor);
       } else {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
         getMovies(1);
       }
     }, 1000),
