@@ -130,13 +130,15 @@ function HomePage() {
     [searchMovie, getMovies]
   );
   return (
-    <Container sx={{ display: "flex", minHeight: "100vh", mt: 3 }}>
+    <Container
+      sx={{ display: "flex", minHeight: "100vh", width: "100vw", mt: 3 }}
+    >
       <Stack>
         <FormProvider methods={methods}>
           <MovieFilter resetFilter={reset} genres={genres} />
         </FormProvider>
       </Stack>
-      <Stack sx={{ flexGrow: 1 }}>
+      <Stack sx={{ flexGrow: 1, width: "100%" }}>
         <FormProvider methods={methods}>
           <Stack
             spacing={2}
@@ -156,7 +158,7 @@ function HomePage() {
             <MovieSort genres={genres} resetFilter={reset} />
           </Stack>
         </FormProvider>
-        <Box sx={{ position: "relative", height: 1 }}>
+        <Box sx={{ position: "relative", height: 1, width: "100%" }}>
           {loading ? (
             <LoadingScreen />
           ) : (
@@ -171,6 +173,7 @@ function HomePage() {
         </Box>
         <div className="pagination">
           <Pagination
+            size="small"
             count={
               response && response.total_pages < 500
                 ? response.total_pages

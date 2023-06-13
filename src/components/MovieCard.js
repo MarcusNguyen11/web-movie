@@ -12,6 +12,7 @@ function MovieCard({ movie }) {
     <Card onClick={() => navigate(`/movie/${movie.id}`)}>
       <CardActionArea>
         <CardMedia
+          className="movie-pic"
           component="img"
           height="200"
           image={`https://image.tmdb.org/t/p/w500` + movie.backdrop_path}

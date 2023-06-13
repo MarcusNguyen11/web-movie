@@ -7,7 +7,7 @@ function MovieSort({ genres }) {
       name="genres"
       label="Genres"
       size="small"
-      sx={{ width: 300, display: { xs: "flex", md: "none", lg: "none" } }}
+      sx={{ display: { xs: "flex", md: "none", lg: "none" } }}
     >
       {genres?.map((genre) => (
         <option key={genre.id} value={genre.id}>
