@@ -119,16 +119,16 @@ function HomePage() {
     setLoading(false);
   };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const processChange = useCallback(
-    debounce((searchInfor) => {
-      if (searchInfor) {
-        searchMovie(1, searchInfor);
-      } else {
-        getMovies(1);
-      }
-    }, 1000),
-    [searchMovie, getMovies]
-  );
+  // const processChange = useCallback(
+  //   debounce((searchInfor) => {
+  //     if (searchInfor) {
+  //       searchMovie(1, searchInfor);
+  //     } else {
+  //       getMovies(1);
+  //     }
+  //   }, 1000),
+  //   [searchMovie, getMovies]
+  // );
   return (
     <Container
       sx={{ display: "flex", minHeight: "100vh", width: "100vw", mt: 3 }}
