@@ -124,6 +124,7 @@ function HomePage() {
       if (searchInfor) {
         searchMovie(1, searchInfor);
       } else {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         getMovies(1);
       }
     }, 1000),
