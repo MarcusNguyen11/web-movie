@@ -117,8 +117,8 @@ function DetailPage() {
                           sx={{ mb: 2 }}
                         >
                           <Rating
-                            value={movie.vote_count}
-                            precision={0.1}
+                            value={movie.vote_average / 2}
+                            precision={0.5}
                             readOnly
                           />
                           <Typography
